@@ -1,49 +1,55 @@
+// Program.cs
 using ABCRetailers.Services;
+using Microsoft.AspNetCore.Http.Features;
 using System.Globalization;
 
-namespace ABCRetailers
+var builder = WebApplication.CreateBuilder(args);
+
+// MVC
+builder.Services.AddControllersWithViews();
+
+// Typed HttpClient for your Azure Functions
+builder.Services.AddHttpClient("Functions", (sp, client) =>
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+    var cfg = sp.GetRequiredService<IConfiguration>();
+    var baseUrl = cfg["Functions:BaseUrl"] ?? throw new InvalidOperationException("Functions:BaseUrl missing");
+    client.BaseAddress = new Uri(baseUrl.TrimEnd('/') + "/api/"); // adjust if your Functions don't use /api
+    client.Timeout = TimeSpan.FromSeconds(100);
+});
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+// Use the typed client (replaces IAzureStorageService everywhere)
+builder.Services.AddScoped<IFunctionsApi, FunctionsApiClient>();
 
-            // Register Azure Storage Service
-            builder.Services.AddScoped<IAzureStorageService, AzureStorageService>();
+// Optional: allow larger multipart uploads (images, proofs, etc.)
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.MultipartBodyLengthLimit = 50 * 1024 * 1024; // 50 MB
+});
 
-            // Add logging
-            builder.Services.AddLogging();
+// Optional: logging is added by default, keeping this is harmless
+builder.Services.AddLogging();
 
-            var app = builder.Build();
+var app = builder.Build();
 
-            // Set culture for decimal handling (FIXES PRICE ISSUE)
-            var culture = new CultureInfo("en-US");
-            CultureInfo.DefaultThreadCurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentUICulture = culture;
+// Culture (your original fix for decimal handling)
+var culture = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            app.Run();
-        }
-    }
+// Pipeline
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

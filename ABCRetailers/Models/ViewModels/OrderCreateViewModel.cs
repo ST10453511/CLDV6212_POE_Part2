@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Models/ViewModels/OrderCreateViewModel.cs
+using System.ComponentModel.DataAnnotations;
 
 namespace ABCRetailers.Models.ViewModels
 {
@@ -17,10 +18,6 @@ namespace ABCRetailers.Models.ViewModels
         [Range(1, int.MaxValue, ErrorMessage = "Quantity must be at least 1")]
         public int Quantity { get; set; }
 
-        [Required]
-        [Display(Name = "Order Date")]
-        [DataType(DataType.Date)]
-        public DateTime OrderDate { get; set; } = DateTime.Today;
 
         [Required]
         [Display(Name = "Status")]

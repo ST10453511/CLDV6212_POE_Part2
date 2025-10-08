@@ -1,46 +1,31 @@
-﻿using Azure;
-using Azure.Data.Tables;
+﻿// Models/Product.cs
 using System.ComponentModel.DataAnnotations;
 
 namespace ABCRetailers.Models
 {
-    public class Product : ITableEntity
+    public class Product
     {
-        public string PartitionKey { get; set; } = "Product";
-        public string RowKey { get; set; } = Guid.NewGuid().ToString();
-        public DateTimeOffset? Timestamp { get; set; }
-        public ETag ETag { get; set; }
-
         [Display(Name = "Product ID")]
-        public string ProductId => RowKey;
+        public string Id { get; set; } = string.Empty; // set from Function response
 
-        [Required]
+        [Required(ErrorMessage = "Product name is required")]
         [Display(Name = "Product Name")]
         public string ProductName { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Description is required")]
         [Display(Name = "Description")]
         public string Description { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Price is required")]
-        [Display(Name = "Price")]
-        public string PriceString { get; set; } = string.Empty;
+ 
 
-        [Display(Name = "Price")]
-        public double Price
-        {
-            get
-            {
-                return double.TryParse(PriceString, out var result) ? result : 0;
-            }
-            set
-            {
-                PriceString = value.ToString("F2");
-            }
-        }
+        // Models/Product.cs  (only the Range line shown)
+        [Required, Display(Name = "Price")]
+        [Range(typeof(decimal), "0.01", "79228162514264337593543950335",
+               ErrorMessage = "Price must be greater than 0")]
+        public decimal Price { get; set; }
 
-        [Required]
-        [Display(Name = "Stock Available")]
+
+        [Required, Display(Name = "Stock Available")]
         public int StockAvailable { get; set; }
 
         [Display(Name = "Image URL")]
