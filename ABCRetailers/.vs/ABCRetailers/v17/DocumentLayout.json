@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04C2A018-0A43-4E79-B281-B41628C4F3F7}|..\\ABCRetailers.Functions\\ABCRetailers.Functions.csproj|c:\\users\\moegammad yaaseen\\onedrive\\desktop\\cloud development\\cldv6212_poe_part2\\abcretailers.functions\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC9A7E0E-4A81-4A8A-85C3-339F44396AF1}|ABCRetailers.csproj|c:\\users\\moegammad yaaseen\\onedrive\\desktop\\cloud development\\cldv6212_poe_part2\\abcretailers\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EC9A7E0E-4A81-4A8A-85C3-339F44396AF1}|ABCRetailers.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04C2A018-0A43-4E79-B281-B41628C4F3F7}|..\\ABCRetailers.Functions\\ABCRetailers.Functions.csproj|c:\\users\\moegammad yaaseen\\onedrive\\desktop\\cloud development\\cldv6212_poe_part2\\abcretailers.functions\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,11 +17,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "local.settings.json",
               "DocumentMoniker": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers.Functions\\local.settings.json",
               "RelativeDocumentMoniker": "..\\ABCRetailers.Functions\\local.settings.json",
@@ -29,20 +29,20 @@
               "RelativeToolTip": "..\\ABCRetailers.Functions\\local.settings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-08T18:12:46.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T18:12:46.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-07T21:43:47.823Z"
+              "WhenOpened": "2025-10-07T21:43:47.823Z",
+              "EditorCaption": ""
             }
           ]
         }
