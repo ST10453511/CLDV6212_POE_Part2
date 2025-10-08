@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud\\ABCRetailers\\ABCRetailers.csproj": {}
+    "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\ABCRetailers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud\\ABCRetailers\\ABCRetailers.csproj": {
+    "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\ABCRetailers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud\\ABCRetailers\\ABCRetailers.csproj",
+        "projectUniqueName": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\ABCRetailers.csproj",
         "projectName": "ABCRetailers",
-        "projectPath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud\\ABCRetailers\\ABCRetailers.csproj",
+        "projectPath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\ABCRetailers.csproj",
         "packagesPath": "C:\\Users\\Moegammad Yaaseen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud\\ABCRetailers\\obj\\",
+        "outputPath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

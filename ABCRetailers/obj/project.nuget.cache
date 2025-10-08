@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xaZg271n7pM=",
+  "dgSpecHash": "G+wZ/AbQvg4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud\\ABCRetailers\\ABCRetailers.csproj",
+  "projectFilePath": "C:\\Users\\Moegammad Yaaseen\\OneDrive\\Desktop\\Cloud Development\\CLDV6212_POE_Part2\\ABCRetailers\\ABCRetailers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Moegammad Yaaseen\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\Moegammad Yaaseen\\.nuget\\packages\\azure.data.tables\\12.11.0\\azure.data.tables.12.11.0.nupkg.sha512",
